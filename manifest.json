@@ -1,7 +1,11 @@
 {
   "manifest_version": 3,
-  "name": "ZR Maps Scraper",
+  "name": "ZMWD Leads Scraper",
   "version": "3.0",
+  "description": "Professional Google Maps lead scraper Chrome extension for extracting business listings and exporting leads into CSV format.",
+
+  "author": "Zeeshan Manzoor",
+
   "permissions": [
     "tabs",
     "scripting",
@@ -9,12 +13,23 @@
     "downloads",
     "activeTab"
   ],
+
   "host_permissions": [
     "https://www.google.com/*"
   ],
+
   "background": {
     "service_worker": "background.js"
   },
+
+ "icons": {
+    "128": "icon/icon.png"
+  },
+
+  "action": {
+    "default_icon": "icon/icon.png"
+  },
+
   "content_scripts": [
     {
       "matches": ["https://www.google.com/maps/*"],
